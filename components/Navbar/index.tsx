@@ -94,6 +94,19 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item hover__bottom">
                   <Link
+                    href="/resume"
+                    activeClassName="is-active"
+                    className="nav-link"
+                    id="cardHover"
+                    onClick={closeShow}
+                    aria-label="Go To Resume Page"
+                    title="Resume"
+                  >
+                    Resume
+                  </Link>
+                </li>
+                <li className="nav-item hover__bottom">
+                  <Link
                     href="/contact"
                     activeClassName="is-active"
                     className="nav-link"

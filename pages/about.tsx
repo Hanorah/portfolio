@@ -247,7 +247,7 @@ const About = () => {
                   aria-label="TSL Nigeria"
                   href="#"
                 >
-                  INTERN GRAPHIC DESIGNER. <small>tsl nigeria</small>
+                  DESIGNER. <small>tsl nigeria</small>
                 </a>
                 <a className="float-right" tabIndex={-1}>
                   <Date /> <b>2018-2019</b>

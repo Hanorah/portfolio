@@ -2,8 +2,9 @@
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
 
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com'; // Import EmailJS
 
 /* -------------------------- Internal Dependencies ------------------------- */
 
@@ -11,6 +12,26 @@ import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null); // Specify the type of the ref
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => { // Type the event parameter
+    e.preventDefault(); // Prevent default form submission
+
+    emailjs.sendForm(
+      'service_hc42hyp',  // Replace with your EmailJS Service ID
+      'template_1ao4v29',  // Replace with your EmailJS Template ID
+      form.current!, // Use the non-null assertion operator since we know it's not null
+      'k-BWdsQZrHfEQhKHh'       // Replace with your EmailJS User ID (Public Key)
+    )
+      .then((result) => {
+        console.log(result.text); // Handle success
+        alert("Email sent successfully!"); // You can customize this
+      }, (error) => {
+        console.log(error.text); // Handle error
+        alert("Failed to send email, please try again later.");
+      });
+  };
+
   return (
     <Layout title="Contact">
       <PageSection>
@@ -23,10 +44,7 @@ const Contact = () => {
             </p>
           </article>
           <br />
-          <form
-            method="POST"
-            action="https://formspree.io/adenekanwonderful41@gmail.com"
-          >
+          <form ref={form} onSubmit={sendEmail}> {/* Use the ref and onSubmit handler */}
             <div className="fields">
               <div className="field half">
                 <input
@@ -79,7 +97,7 @@ const Contact = () => {
         </FooterLink>
         <br />
       </PageWrapper>
-    </Layout >
+    </Layout>
   );
 };
 

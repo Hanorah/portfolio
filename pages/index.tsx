@@ -54,8 +54,13 @@ const Home = () => {
 
               </article>
               <aside>
-                <img src="/no.png" alt="Description of image" />
+                <video controls width="600">
+                  <source src="/path-to-your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </aside>
+
+
             </div>
 
             <br />
@@ -303,7 +308,7 @@ const PageSection = styled.div`
     max-width: 100%;
   }
 
-  aside img {
+  aside video {
     width: 100%;
     height: auto;
     border-radius: 1rem; /* Optional: rounded corners for the image */

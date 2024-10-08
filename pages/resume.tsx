@@ -13,7 +13,7 @@ import FooterLink from '../components/Footer';
 
 const Resume = () => {
   const resumeData =
-    '#';
+    '  https://www.canva.com/design/DAEEkidwA2Q/view?utm_content=DAEEkidwA2Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink';
 
   const previewData = `${resumeData.substr(
     0,

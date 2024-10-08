@@ -45,7 +45,7 @@ const FooterLink: React.FC<IFooterLink &
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://twitter.com/code_wonders"
+            href="https://twitter.com/hanorah"
             aria-label="Go To Okosodo Hanorah Twitter Page"
             title="Twitter Page"
           >
@@ -54,7 +54,7 @@ const FooterLink: React.FC<IFooterLink &
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.facebook.com/AdenekanWonderful"
+            href="https://www.facebook.com/"
             aria-label="Go To Okosodo Hanorah Facebook Page"
             title="Facebook Page"
           >
